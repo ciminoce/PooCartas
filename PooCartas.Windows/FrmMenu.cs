@@ -22,5 +22,11 @@ namespace PooCartas.Windows
             FrmCarta frm = new FrmCarta();
             frm.ShowDialog(this);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmVerTodas frm = new FrmVerTodas();
+            frm.ShowDialog(this);
+        }
     }
 }

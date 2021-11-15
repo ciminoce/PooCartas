@@ -16,7 +16,18 @@ namespace PooCartas.Entidades
 
         private Image imagenCartas;
 
-        public Mazo(int numCartas)
+        public static Mazo _instancia = null;
+
+        public static Mazo GetInstancia()
+        {
+            if (_instancia==null)
+            {
+                _instancia = new Mazo(48);
+            }
+
+            return _instancia;
+        }
+        private Mazo(int numCartas)
         {
             NumeroDeCartas = numCartas;
             cartas = new Carta[NumeroDeCartas];

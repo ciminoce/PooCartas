@@ -18,7 +18,6 @@ namespace PooCartas.Windows
             InitializeComponent();
         }
 
-        private Mazo mazo=new Mazo(48);
         private Carta carta;
         private void FrmCarta_Load(object sender, EventArgs e)
         {
@@ -27,7 +26,7 @@ namespace PooCartas.Windows
 
         private void CargarDatosComboCartas(ref ComboBox combo)
         {
-            combo.DataSource = mazo.GetCartas();
+            combo.DataSource = Mazo.GetInstancia().GetCartas();
         }
 
         private void CartasComboBox_SelectedIndexChanged(object sender, EventArgs e)
